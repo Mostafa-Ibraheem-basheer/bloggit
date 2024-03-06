@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Bloggit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple blog application.
 
-## Available Scripts
+* ![](https://github.com/Mostafa-Ibraheem-basheer/bloggit/blob/main/presentation%20and%20Documentaiton/pre1.gif) ![](https://github.com/Mostafa-Ibraheem-basheer/bloggit/blob/main/presentation%20and%20Documentaiton/pre2.gif) 
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+* Preview Existing Posts.
+* Create Posts.
+![](https://github.com/Mostafa-Ibraheem-basheer/bloggit/blob/main/presentation%20and%20Documentaiton/create%20post.gif)
+* Add comments on Posts.
+![](https://github.com/Mostafa-Ibraheem-basheer/bloggit/blob/main/presentation%20and%20Documentaiton/Add%20comment.gif)
+* like and dislike posts and comments.
+![](https://github.com/Mostafa-Ibraheem-basheer/bloggit/blob/main/presentation%20and%20Documentaiton/voting.gif)
+* delete posts and comments.
+![](https://github.com/Mostafa-Ibraheem-basheer/bloggit/blob/main/presentation%20and%20Documentaiton/delete.gif)
+* Responsive UI.
+![](https://github.com/Mostafa-Ibraheem-basheer/bloggit/blob/main/presentation%20and%20Documentaiton/Responsive.gif)
+* Reactive.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Made With
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* ReactJs
+* React Router
+* JSON Server
+* Sass
+* gulp
+* NodeJs
 
-### `npm test`
+## installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm install`
+to Install the dependancies
 
-### `npm run build`
+### `npm run start`
+to run the app in development mode
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npx json-server data/db.json --port 8000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+to run the backend on port 8000 to prevent conflict with react app port
 
-### `npm run eject`
+### `npm run gulp`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+to intialize the glupfile compiler of the sass files and watch for changes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Documentaion
+* [Full App Documentaion](https://github.com/Mostafa-Ibraheem-basheer/bloggit/blob/main/presentation%20and%20Documentaiton/Bloggit%20Technical%20Documentation.docx)
