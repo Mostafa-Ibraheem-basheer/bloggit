@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+body {
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+::-webkit-scrollbar {
+  width: 0.75vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #24292f;
+  border-radius: 9999px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6f6f6f;
+}
+
+.MuiLinearProgress-bar1Indeterminate,
+.MuiLinearProgress-bar2Indeterminate {
+  background-color: #343538 !important;
+}
+
+.MuiLinearProgress-root {
+  background-color: #d93a00 !important;
+  height: 2px !important;
+}
+
+.loading-posts {
+  min-width: 100%;
+  position: absolute;
+}
+
+/* *****component styles******* */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #010409;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #24292f;
+}
+@media (min-width: 0) {
+  .navbar {
+    justify-content: center;
+  }
+}
+@media (min-width: 360px) {
+  .navbar {
+    justify-content: space-between;
+  }
+}
+
+.navbar a {
+  color: #e6edf3;
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+.navbar a:hover {
+  background-color: #24292f;
+  color: #e6edf3;
+  border-radius: 7px;
+}
+.navbar a:focus {
+  background-color: #d93a00;
+  border-radius: 7px;
+  color: #e6edf3;
+}
+.navbar a:active {
+  background-color: #3a424c;
+  border-radius: 7px;
+}
+@media (min-width: 0) {
+  .navbar a {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 240px) {
+  .navbar a {
+    display: inline;
+  }
+}
+
+.logo {
+  color: #e6edf3;
+  font-size: 28pt;
+  background-color: #d93a00;
+  padding: 0px 12px;
+  border-radius: 50%;
+}
+
+#logo-link {
+  background-color: #010409;
+}
+@media (min-width: 0) {
+  #logo-link {
+    display: none;
+  }
+}
+@media (min-width: 320px) {
+  #logo-link {
+    display: block;
+  }
+}
+
+.active {
+  background-color: #d93a00;
+  border-radius: 7px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 19%;
+  border-radius: 25px;
+  border: 1px solid #24292f;
+  padding: 0.5% 0 0.25% 0.4%;
+  margin: 3% 3% 2% -2%;
+  border-radius: 25px;
+  text-align: center;
+  min-width: 25%;
+  max-width: 25%;
+  max-height: 75vh;
+  overflow-y: scroll;
+}
+.sidebar:after {
+  content: "";
+  height: 70px;
+  width: 3px;
+  position: absolute;
+  left: -2px;
+  top: 90%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  background: linear-gradient(transparent, #d93a00, transparent);
+  opacity: 0;
+}
+.sidebar:hover::after {
+  top: 25%;
+  opacity: 1;
+}
+.sidebar::-webkit-scrollbar-track, .sidebar::-webkit-scrollbar-thumb {
+  visibility: hidden;
+}
+.sidebar::-webkit-scrollbar-track {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.sidebar:hover::-webkit-scrollbar-track, .sidebar:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+.sidebar .sb-content {
+  padding: 0.5%;
+  background-color: #010409;
+  border-radius: 25px;
+}
+.sidebar h1,
+.sidebar p {
+  margin: 5%;
+}
+.sidebar .ad {
+  margin: 40% 0 40% 0;
+}
+@media (min-width: 0) {
+  .sidebar {
+    display: none;
+  }
+}
+@media (min-width: 550px) {
+  .sidebar {
+    display: block;
+  }
+}
+@media (min-width: 480px) {
+  .sidebar h1 {
+    font-size: 1.1rem;
+  }
+  .sidebar p {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 600px) {
+  .sidebar h1 {
+    font-size: 1.4rem;
+  }
+  .sidebar p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 900px) {
+  .sidebar h1 {
+    font-size: 2rem;
+  }
+  .sidebar p {
+    font-size: 1.2rem;
+  }
+}
+.sidebar .separator {
+  border-bottom: 1px solid #3a424c;
+  margin: 10px 5%;
+}
+
+.MuiButton-text {
+  text-transform: none !important;
+  font-family: inherit !important;
+}
+
+.container {
+  border-radius: 25px;
+  border: 1px solid #24292f;
+  padding: 0.5%;
+  position: relative;
+  margin-right: 10px;
+  width: auto;
+}
+.container:after {
+  content: "";
+  height: 70px;
+  width: 3px;
+  position: absolute;
+  left: -2px;
+  top: 90%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  background: linear-gradient(transparent, #d93a00, transparent);
+  opacity: 0;
+}
+.container:hover::after {
+  top: 25%;
+  opacity: 1;
+}
+
+.preview {
+  padding: 10px 16px;
+  background-color: #010409;
+  border-radius: 25px;
+}
+.preview .author {
+  color: #73777a;
+}
+.preview a {
+  text-decoration: none;
+}
+.preview h2 {
+  color: #e6edf3;
+  margin: 1% 1%;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.preview p {
+  margin-left: 1%;
+  overflow: hidden;
+  color: #e6edf3;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: break-word;
+  display: -webkit-inline-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.view-more {
+  color: #24292f;
+  text-align: center;
+}
+.view-more span {
+  color: #24292f;
+}
+
+.separator {
+  border-bottom: 1px solid #3a424c;
+  margin: 10px 3%;
+}
+
+.insight {
+  display: flex;
+  max-width: fit-content;
+  flex-wrap: wrap;
+  color: #e6edf3;
+  padding: 0px 10px 10px 0px;
+}
+.insight div {
+  display: inline-block;
+  border: 1px solid #24292f;
+  background-color: #d93a00;
+  border-radius: 25px;
+  padding: 10px 15px 10px 15px;
+}
+@media (min-width: 360px) {
+  .insight div div {
+    margin: 0;
+  }
+}
+@media (min-width: 525px) {
+  .insight div {
+    margin: 5px 5px 0px 5px;
+  }
+}
+.insight .MuiButtonBase-root {
+  color: #e6edf3 !important;
+  padding: 0;
+  margin: 0;
+  border-radius: 25px;
+  min-width: 0px;
+  z-index: 1 !important;
+}
+.insight div:hover {
+  box-shadow: 3px 3px 15px rgba(230, 237, 243, 0.1);
+}
+
+#author {
+  color: #e6edf3;
+}
+
+.comments-num::after {
+  content: "Comments";
+}
+
+input {
+  color: #e6edf3;
+  background-color: #010409;
+  border-radius: 25px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #24292f;
+  text-indent: 10px;
+}
+input:focus {
+  outline: 0;
+  border: 1px solid #454f5a;
+}
+
+textarea {
+  color: #e6edf3;
+  background-color: #010409;
+  border-radius: 25px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #24292f;
+  text-indent: 10px;
+}
+textarea:focus {
+  outline: 0;
+  border: 1px solid #454f5a;
+}
+
+/* ********Pages styles********** */
+.alert {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.alert::after {
+  content: " ";
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-image: url("E:/Personal Projects/review/Bloggit/public/BG.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  opacity: 0.2;
+}
+.alert h1 {
+  font-size: 5rem;
+}
+.alert p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.alert a {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #d93a00;
+}
+
+.create {
+  display: flex;
+  flex-direction: column;
+}
+.create form {
+  display: grid;
+  margin: 0 25%;
+}
+.create form input,
+.create form textarea {
+  min-width: 100px;
+}
+.create form .MuiButtonBase-root {
+  color: #e6edf3 !important;
+  padding: 0;
+  margin: 0;
+  border-radius: 9999px;
+  min-width: 0px;
+  z-index: 1 !important;
+  padding: 5px 20px;
+  margin: 10px auto 0 auto;
+  background-color: #d93a00;
+}
+.create .new-post {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 3%;
+}
+
+.home {
+  display: flex;
+}
+
+.no-posts h1, .no-posts p {
+  margin-left: 5%;
+}
+@media (min-width: 0) {
+  .no-posts {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 95%;
+    height: 80%;
+    background-image: url("E:/Personal Projects/review/Bloggit/public/BG.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+@media (min-width: 550px) {
+  .no-posts {
+    position: static;
+    display: block;
+    height: 100%;
+  }
+}
+
+.add-comment {
+  display: flex;
+  flex-wrap: wrap;
+}
+.add-comment h3 {
+  margin-top: 2%;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.add-comment form {
+  display: flex;
+}
+.add-comment form .warning {
+  position: relative;
+  z-index: 10000;
+  right: 50%;
+  top: 60%;
+}
+@media (min-width: 400px) {
+  .add-comment form {
+    flex-wrap: nowrap !important;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .add-comment form input {
+    margin: 0 15px;
+    min-width: 30px;
+  }
+  .add-comment form textarea {
+    width: 60%;
+    height: 30%;
+    min-width: 50px;
+    margin: 0 15px 0 0;
+  }
+  .add-comment form textarea::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+  .add-comment form .MuiButton-root {
+    color: #e6edf3 !important;
+    padding: 0;
+    margin: 0;
+    border-radius: 99999px;
+    min-width: 0px;
+    z-index: 1 !important;
+    margin: 0 auto !important;
+    padding: 5px !important;
+    word-break: normal;
+  }
+}
+@media (min-width: 0) {
+  .add-comment form {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .add-comment form input {
+    word-wrap: break-word;
+    word-break: break-word;
+    margin: 15px 0;
+    min-width: 30px;
+  }
+  .add-comment form textarea {
+    word-wrap: break-word;
+    word-break: break-word;
+    width: 60%;
+    height: inherit;
+    min-width: 50px;
+    margin: 0 15px;
+  }
+  .add-comment form .MuiButton-root {
+    color: #e6edf3 !important;
+    padding: 0;
+    margin: 0;
+    border-radius: 25px;
+    min-width: 0px;
+    z-index: 1 !important;
+    padding: 5px 20px !important;
+    margin: 10px 0 !important;
+    background-color: #d93a00 !important;
+  }
+}
+
+.comment .separator {
+  margin: 15px -5% !important;
+}
+.comment h3,
+.comment p {
+  margin-bottom: 5px;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.comment #like, .comment #dislike, .comment #delete {
+  color: #f34100 !important;
+  background-color: #010409;
+  border: none;
+}
+.comment #delete {
+  color: #B00020 !important;
+}
+
+.no-comments {
+  height: 20vh;
+}
+
+/* #like,#dislike,#delete{
+  @include sm{
+    left: -10px;
+    padding: 5px 10px !important;
+    margin: 0 5px !important;
+  }
+
+  @include xxs{
+    @include btn;
+    position: relative;
+    left: 0;
+    padding: 5px 10px !important;
+    margin: 5px 2px !important;
+    background-color: none !important;
+    color: $icon-color !important;
+  }
+} */
+.blog-page {
+  display: flex;
+}
+
+.blog-details {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #24292f;
+  border-radius: 25px;
+  margin: 3%;
+}
+@media (min-width: 550px) {
+  .blog-details {
+    width: 80%;
+  }
+}
+.blog-details .buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.blog-details #Delete {
+  background-color: #B00020;
+}
+.blog-details:after {
+  content: "";
+  height: 70px;
+  width: 3px;
+  position: absolute;
+  left: 2.95%;
+  top: 90%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  background: linear-gradient(transparent, #d93a00, transparent);
+  opacity: 0;
+}
+.blog-details:hover::after {
+  top: 40%;
+  opacity: 1;
+}
+.blog-details p {
+  margin-bottom: 20px;
+}
+.blog-details .separator {
+  border-bottom: 1px solid #3a424c;
+  margin: 10px -5%;
+}
+.blog-details .blog {
+  padding: 4%;
+  margin: 0.6%;
+  background-color: #010409;
+  border-radius: 25px;
+}
+.blog-details .blog .MuiButtonBase-root {
+  background-color: #d93a00;
+}
+.blog-details .blog .MuiButtonBase-root:hover {
+  background-color: #f34100;
+}
+.blog-details .blog .author {
+  color: #73777a;
+  font-weight: light;
+}
+@media (min-width: 0) {
+  .blog-details .blog .MuiButtonBase-root {
+    color: #e6edf3 !important;
+    padding: 0;
+    margin: 0;
+    border-radius: 9999px;
+    min-width: 0px;
+    z-index: 1 !important;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 390px) {
+  .blog-details .blog .MuiButtonBase-root {
+    margin-left: 5px;
+  }
+}

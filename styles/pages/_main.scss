@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  font-family: 'Quicksand';
+  //used to slice the word into a new line if it's too long
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+body {
+  background-color: $primary;
+  color: $text-color;
+}
+
+::-webkit-scrollbar {
+  width: 0.75vw;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: $border-color;
+  border-radius: 9999px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 9999px;
+  &:hover {
+    background: lighten(#555, 10);
+  }
+}
+
+.MuiLinearProgress-bar1Indeterminate,
+.MuiLinearProgress-bar2Indeterminate {
+  background-color: $active-color !important;
+}
+
+.MuiLinearProgress-root {
+  background-color: $icon-color !important;
+  height: 2px !important;
+}
+
+.loading-posts {
+  min-width: 100%;
+  position: absolute;
+}

@@ -1,0 +1,70 @@
+//comments
+@import 'components/comments';
+
+.blog-page {
+  display: flex;
+}
+
+.blog-details {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $border-color;
+  border-radius: 25px;
+  margin: 3%;
+  @include custom(550px){
+    width: 80%;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #Delete{
+    background-color: $error-color;
+  }
+
+  @include hover-shard(3px, 2.95%, 40%);
+
+  p {
+    margin-bottom: 20px;
+  }
+  .separator {
+    @include separator(10px -5%);
+  }
+  .blog {
+    padding: 4%;
+    margin: 0.6%;
+    background-color: $bg-color;
+    border-radius: 25px;
+    .MuiButtonBase-root{
+      background-color: $icon-color;
+      &:hover {
+        background-color: lighten($icon-color, 5);
+      }
+    }
+
+    .author{
+      color: mix($text-color, black, 50%);
+      font-weight: light;
+    }
+
+    @include xxs {
+      .MuiButtonBase-root {
+        @include btn(
+          0,
+          0,
+          9999px
+        ); // here we can use our mixin to apply multiple css properties to the mui button
+        padding: 10px 20px;
+        margin-bottom: 5px;
+      }
+    }
+    @include custom(390px) {
+      .MuiButtonBase-root {
+        margin-left: 5px;
+      }
+    }
+  }
+}

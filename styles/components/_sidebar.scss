@@ -1,0 +1,76 @@
+.sidebar {
+  position: sticky;
+  top: 19%;
+  border-radius: 25px;
+  border: 1px solid $border-color;
+  padding: 0.5% 0 0.25% 0.4%;
+  margin: 3% 3% 2% -2%;
+  border-radius: 25px;
+  text-align: center;
+  min-width: 25%;
+  max-width: 25%;
+  max-height: 75vh;
+  overflow-y: scroll;
+
+  @include hover-shard;
+
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-thumb {
+    visibility: hidden;
+  }
+  &::-webkit-scrollbar-track {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  &:hover {
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb {
+      visibility: visible;
+    }
+  }
+  .sb-content {
+    padding: 0.5%;
+    background-color: $bg-color;
+    border-radius: 25px;
+  }
+  h1,
+  p {
+    margin: 5%;
+  }
+  .ad {
+    margin: 40% 0 40% 0;
+  }
+  @include xxs {
+    display: none;
+  }
+  @include custom(550px){
+    display: block;
+  }
+  @include sm {
+    h1 {
+      font-size: 1.1rem;
+    }
+    p {
+      font-size: 0.75rem;
+    }
+  }
+  @include custom(600px) {
+    h1 {
+      font-size: 1.4rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  @include lg {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  .separator {
+    @include separator(10px 5%);
+  }
+}

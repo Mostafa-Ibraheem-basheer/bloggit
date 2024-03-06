@@ -1,0 +1,21 @@
+//shard effect
+@mixin hover-shard($shard-width: 3px, $shard-offset: -2px, $distance: 25%) {
+  &:after {
+    content: '';
+    height: 70px;
+    width: $shard-width;
+    position: absolute;
+    left: $shard-offset;
+    top: 90%;
+    transition: top, opacity;
+    transition-duration: 600ms;
+    transition-timing-function: ease;
+    background: linear-gradient(transparent, $icon-color, transparent);
+    opacity: 0;
+  }
+
+  &:hover::after {
+    top: $distance;
+    opacity: 1;
+  }
+}

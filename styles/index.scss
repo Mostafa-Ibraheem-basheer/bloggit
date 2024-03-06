@@ -1,0 +1,51 @@
+//personal notes
+//in sass we can use Variables,maps,lists, loops(@for $i from $start through $end{} or @each $key,$val in $map{} or in lists),
+// if (@if(condition){}) conditions, functions(by using @function and return data by using @return ), and more
+//we can create maps of variables and preform operations on them using the sass:map API
+//the '_' tells the gulpfile to not complie this sass file into css
+//we use the term @use to import functions from the sass API
+//the '&' operator refers to the parent class when you're using nested classes
+//the @mixin function lets you get a set of predefined rules or lets you add rules to them
+
+//font
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+//common values
+@import 'variables';
+
+//animations and effects
+@import 'animations';
+
+//main body and content syles and layouts
+@import 'pages/main';
+@import 'breakpoints';
+
+/* *****component styles******* */
+//navigation bar styles
+@import 'components/navbar';
+
+//separator
+@import 'components/separator';
+
+//sidebar
+@import 'components/sidebar';
+
+//buttons
+@import 'components/button';
+
+//post cards
+@import 'components/preview';
+
+//imputs and text areas
+@import 'components/input';
+
+/* ********Pages styles********** */
+//Alerts and NotFound
+@import 'pages/alert';
+//new post page
+@import 'pages/create';
+//homepage
+@import 'pages/home';
+//post details page
+@import 'pages/blog';
+

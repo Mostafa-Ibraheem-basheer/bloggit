@@ -1,0 +1,96 @@
+@use 'sass:math';
+//post preview styles
+
+.container {
+  border-radius: 25px;
+  border: 1px solid $border-color;
+  padding: 0.5%;
+  position: relative;
+  margin-right: 10px;
+  width: auto;
+  @include hover-shard;
+}
+
+.preview {
+  padding: 10px 16px;
+  background-color: $bg-color;
+  border-radius: 25px;
+
+  .author{
+    color: mix($text-color, black, 50%);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    color: $text-color;
+    margin: 1% 1%;
+    //used to slice the words if there's no space between them
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  p {
+    margin-left: 1%;
+    overflow: hidden;
+    color: $text-color;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-word;
+    display: -webkit-inline-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.view-more {
+  color: $border-color;
+  text-align: center;
+  span {
+    color: $border-color;
+  }
+}
+
+.separator {
+  @include separator();
+}
+
+//likes,dislikes,comments buttons
+.insight {
+  display: flex;
+  max-width: fit-content;
+  flex-wrap: wrap;
+  color: $button-text-color;
+  padding: 0px 10px 10px 0px;
+  div {
+    display: inline-block;
+    border: 1px solid $border-color;
+    background-color: $icon-color;
+    border-radius: 25px;
+    padding: 10px 15px 10px 15px;
+    @include xs {
+      div {
+        margin: 0;
+      }
+    }
+    @include custom(525px) {
+      margin: 5px 5px 0px 5px;
+    }
+  }
+  .MuiButtonBase-root {
+    @include btn; // here we can use our mixin to apply multiple css properties to the mui button
+  }
+  div:hover {
+    box-shadow: $shadows;
+  }
+}
+
+#author {
+  color: $text-color;
+}
+
+.comments-num::after {
+  content: 'Comments';
+}

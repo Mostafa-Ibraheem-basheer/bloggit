@@ -1,0 +1,15 @@
+// a mixin is a way to bundle properties to use some where else
+//the default values of args can be changed by calling the mixin just like a function (e.g. btn(5,10,30))
+@mixin btn($button-padding: 0, $button-margin: 0, $border: 25px) {
+  color: $button-text-color !important;
+  padding: $button-padding;
+  margin: $button-margin;
+  border-radius: $border;
+  min-width: 0px;
+  z-index: 1 !important;
+}
+
+.MuiButton-text {
+  text-transform: none !important;
+  font-family: inherit !important;
+}

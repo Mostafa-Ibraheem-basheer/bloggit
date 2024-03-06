@@ -1,0 +1,23 @@
+.create {
+  display: flex;
+  flex-direction: column;
+  form {
+    display: grid;
+    margin: 0 25%;
+    input,
+    textarea {
+      min-width: 100px;
+    }
+    .MuiButtonBase-root {
+      @include btn(0, 0, 9999px);
+      padding: 5px 20px; // here we can use our mixin to apply multiple css properties to the mui button
+      margin: 10px auto 0 auto;
+      background-color: $icon-color;
+    }
+  }
+
+  .new-post {
+    margin-top: 5%;
+    text-align: center;
+  }
+}

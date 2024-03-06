@@ -1,0 +1,32 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 3%;
+}
+
+.home {
+  display: flex;
+}
+
+.no-posts{
+  h1,p{
+    margin-left: 5%;
+  }
+  @include xxs{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 95%;
+    height: 80%;
+    background-image: url("E:/Personal Projects/review/dojo-blog/public/BG.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  @include custom(550px){
+    position: static;
+    display: block;
+    height: 100%;
+  }
+}

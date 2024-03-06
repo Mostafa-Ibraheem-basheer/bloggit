@@ -1,0 +1,114 @@
+.add-comment {
+  display: flex;
+  flex-wrap: wrap;
+  h3 {
+    margin-top: 2%;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    .warning{
+      position: relative;
+      z-index: 10000;
+      right: 50%;
+      top: 60%;
+    }
+    @include custom(400px) {
+      flex-wrap: nowrap !important;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      input {
+        margin: 0 15px;
+        min-width: 30px;
+      }
+      textarea {
+        width: 60%;
+        height: 30%;
+        min-width: 50px;
+        margin: 0 15px 0 0;
+        &::-webkit-scrollbar-corner {
+          background-color: transparent;
+        }
+      }
+      .MuiButton-root {
+        @include btn(0,0,99999px);
+        margin: 0  auto !important;
+        padding: 5px !important;
+        word-break: normal;
+      }
+    }
+
+    @include xxs {
+      flex-wrap: wrap;
+      justify-content: center;
+      input {
+        word-wrap: break-word;
+        word-break: break-word;
+        margin: 15px 0;
+        min-width: 30px;
+      }
+      textarea {
+        word-wrap: break-word;
+        word-break: break-word;
+        width: 60%;
+        height: inherit;
+        min-width: 50px;
+        margin: 0 15px;
+      }
+      .MuiButton-root {
+        @include btn;
+        padding: 5px 20px !important;
+        margin: 10px 0 !important;
+        background-color: $icon-color !important;
+      }
+    }
+  }
+}
+
+.comment {
+  .separator {
+    margin: 15px -5% !important;
+  }
+  h3,
+  p {
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+
+  #like,#dislike,#delete{
+    color: lighten($icon-color,5) !important;
+    background-color: $bg-color;
+    border: none;
+  }
+  #delete{
+    color: $error-color !important;
+  }
+}
+
+.no-comments{
+  height: 20vh;
+}
+
+
+/* #like,#dislike,#delete{
+  @include sm{
+    left: -10px;
+    padding: 5px 10px !important;
+    margin: 0 5px !important;
+  }
+  
+  @include xxs{
+    @include btn;
+    position: relative;
+    left: 0;
+    padding: 5px 10px !important;
+    margin: 5px 2px !important;
+    background-color: none !important;
+    color: $icon-color !important;
+  }
+} */

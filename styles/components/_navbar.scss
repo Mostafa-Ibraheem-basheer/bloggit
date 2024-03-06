@@ -1,0 +1,74 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: $bg-color;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $border-color;
+  @include xxs {
+    //here we can include props inside the mixin instead of using what's already inside
+    justify-content: center;
+  }
+  @include xs {
+    justify-content: space-between;
+  }
+}
+
+.navbar a {
+  color: $text-color;
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: $border-color;
+    color: $button-text-color;
+    border-radius: 7px;
+  }
+  &:focus {
+    background-color: $icon-color;
+    border-radius: 7px;
+    color: $button-text-color;
+  }
+  &:active {
+    background-color: lighten(
+      $border-color,
+      10
+    ); //this is a sass function that gives lighter versions of a color
+    border-radius: 7px;
+  }
+
+  @include xxs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include custom(240px) {
+    display: inline;
+  }
+}
+
+.logo {
+  color: $button-text-color;
+  font-size: 28pt;
+  background-color: $icon-color;
+  padding: 0px 12px;
+  border-radius: 50%;
+}
+
+#logo-link {
+  background-color: $secondary;
+  @include xxs {
+    display: none;
+  }
+  @include custom(320px) {
+    display: block;
+  }
+}
+
+.active {
+  background-color: $icon-color;
+  border-radius: 7px;
+}
