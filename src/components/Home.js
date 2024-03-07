@@ -2,6 +2,7 @@ import useFetch from '../hooks/useFetch';
 import Blogs from '../props/Blogs';
 import LinearProgress from '@mui/material/LinearProgress';
 import SideBar from './SideBar';
+import  Alert  from '../props/Alert';
 
 const Home = () => {
   const {
@@ -11,7 +12,7 @@ const Home = () => {
   } = useFetch('http://localhost:8000/blogs');
   return (
     <div className="home">
-      {error && <h2>{error}</h2>}
+      {error && <Alert alertType={'Error'} alertBody={error}></Alert>}
       {loading && (
         <div className="loading-posts">
           <LinearProgress variant="indeterminate" />

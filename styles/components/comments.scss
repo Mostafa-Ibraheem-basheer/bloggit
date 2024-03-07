@@ -93,22 +93,3 @@
 .no-comments{
   height: 20vh;
 }
-
-
-/* #like,#dislike,#delete{
-  @include sm{
-    left: -10px;
-    padding: 5px 10px !important;
-    margin: 0 5px !important;
-  }
-  
-  @include xxs{
-    @include btn;
-    position: relative;
-    left: 0;
-    padding: 5px 10px !important;
-    margin: 5px 2px !important;
-    background-color: none !important;
-    color: $icon-color !important;
-  }
-} */

@@ -383,7 +383,7 @@ textarea:focus {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-image: url("E:/Personal Projects/review/Bloggit/public/BG.png");
+  background-image: url("../../public/BG.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -452,7 +452,7 @@ textarea:focus {
     position: absolute;
     width: 95%;
     height: 80%;
-    background-image: url("E:/Personal Projects/review/Bloggit/public/BG.png");
+    background-image: url("../../public/BG.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -570,23 +570,6 @@ textarea:focus {
   height: 20vh;
 }
 
-/* #like,#dislike,#delete{
-  @include sm{
-    left: -10px;
-    padding: 5px 10px !important;
-    margin: 0 5px !important;
-  }
-
-  @include xxs{
-    @include btn;
-    position: relative;
-    left: 0;
-    padding: 5px 10px !important;
-    margin: 5px 2px !important;
-    background-color: none !important;
-    color: $icon-color !important;
-  }
-} */
 .blog-page {
   display: flex;
 }

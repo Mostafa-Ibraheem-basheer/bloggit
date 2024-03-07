@@ -6,6 +6,9 @@
 //we use the term @use to import functions from the sass API
 //the '&' operator refers to the parent class when you're using nested classes
 //the @mixin function lets you get a set of predefined rules or lets you add rules to them
+//@extend is the same as mixin but it doesn't take arguments and it's compiled as a class1 , class2 {rules} instead of each classs alone 
+// if don't want a specific rule to be complied in the css file add '%' as a classifier prefix
+// if you declared a variable/propery and want to change it later but it's declared after the change use the  !default indicator so it doesn't update
 
 //font
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
